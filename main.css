@@ -3,7 +3,13 @@ html {
     background-image: linear-gradient(200deg, rgba(149, 226, 240, 0.966) 0%, rgb(255, 255, 255) 100%);
     -webkit-font-smoothing: antialiased;
 }
+a:hover { 
+  background-color: rgb(180, 180, 180);
+}
+.bild:hover{
+  background-color: rgb(180, 180, 180);
 
+}
 body {
     background: #fff;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
