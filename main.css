@@ -40,7 +40,17 @@ samp {
     display: none;
 }
 
-img {
+.Weltkarte{
+    animation: colorize 1s cubic-bezier(0, 0, .78, .36) 1;
+    background: rgba(149, 226, 240, 0.951);
+    border: 5px solid rgba(23, 22, 24, 0.696);
+    border-radius: 80px;
+    display: block;
+    margin: 0.5em auto;
+    max-width: 500%;
+    height: auto;
+}
+img{
     animation: colorize 1s cubic-bezier(0, 0, .78, .36) 1;
     background: rgba(149, 226, 240, 0.951);
     border: 5px solid rgba(23, 22, 24, 0.696);
