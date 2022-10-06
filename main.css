@@ -47,7 +47,8 @@ img {
     border-radius: 80px;
     display: block;
     margin: 0.5em auto;
-    max-width: 300%;
+    max-width: 100%;
+    height: auto;
 }
 
 @keyframes colorize {
