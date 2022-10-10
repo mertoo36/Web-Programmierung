@@ -75,9 +75,8 @@ samp {
   
   #navbar__logo {
     background-color: #ffffff;
-    background-image: linear-gradient(to top, #ffffff, #ffffff);
+    background: url(../Bilder/logo.png);
     background-size: 100%;
-    -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
