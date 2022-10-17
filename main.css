@@ -6,14 +6,14 @@ html {
   background-size: cover;
 }
 a:hover { 
-  background-color: rgb(180, 180, 180);
+  background-color: rgb(255, 255, 255);
 }
 .bild:hover{
   background-color: rgb(180, 180, 180);
 
 }
 body {
-  background: #fff;
+  background: rgba(255, 254, 254, 0.948);
     background-size: cover;
     box-shadow: 10 10 20px rgba(0, 0, 0, 0.06);
     color: #545454;
