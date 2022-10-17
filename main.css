@@ -156,7 +156,7 @@ img{
   flex: 1 1 100%;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 0 0 20px 6px #090b6f85;
+  box-shadow: 0 0 20px 6px #096c6f85;
 }
 @media (max-width: 980px) {
   .box-form {
@@ -180,7 +180,7 @@ img{
   padding: 30px;
   width: 100%;
   height: 100%;
-  background: #5961f9ad;
+  background: #6caed77d;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -202,7 +202,7 @@ img{
   padding: 14px 50px;
   border-radius: 100px;
   display: inline-block;
-  box-shadow: 0 3px 6px 1px #042d4657;
+  box-shadow: 0 3px 6px 1px #096c6f85;
 }
 .box-form .left .overlay span a:last-child {
   background: #1dcaff;
