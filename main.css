@@ -21,9 +21,9 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin: 4 auto;
-    max-width: 1200px;
+    max-width: 1250px;
     padding: 1em 1em 2em;
-    width:100%;
+    width: 100%;
     margin-left:auto;
     margin-right:auto;
 }
@@ -52,7 +52,7 @@ samp {
     display: none;
 }
 .navbar {
-    background: rgba(149, 226, 240, 0.951);
+    background: rgb(149, 226, 240);
     height: 80px;
     display: flex;
     justify-content: center;
