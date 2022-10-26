@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      
+ 
+ #image {
+            display: none;
+        }
+  </style>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Travel-Finder</title>
@@ -15,8 +22,28 @@
         top:557px;
         left:655px;
       }
-      
+    #pin-image-selbst-0 {display:none; }
+    #pin-image-selbst-1 {display:none; }
+    #pin-image-selbst-2 {display:none; }
+    #pin-image-selbst-3 {display:none; }
+    #pin-image-selbst-4 {display:none; }
+    #pin-image-selbst-5 {display:none; }
     </style>
+  
+
+
+
+
+      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-0" width="40" height="40" />
+      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-1" width="40" height="40" />
+      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-2" width="40" height="40" />
+      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-3" width="40" height="40" />
+      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-4" width="40" height="40" />
+      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-5" width="40" height="40" />
+      
+      
+      
+       
   </head>
   <body>
     <!-- Navbar Sectionk -->
@@ -50,16 +77,44 @@
 
     <!--Website-->
     <button onclick="location.href='Asien.html'" type="button">Zurück</button>
- 
-    <img class ="map"
+    
+    <img 
+    onclick="bewertungerstellen(event)"
+    class ="map"
     src="../Bilder/Thailand.png"
     width="3000"
     height="2000" 
     alt="Thailand"
     usemap="#Thailand"
   />
+  <p id="demo"></p>
+  <script>
+    var z=0;
+    function bewertungerstellen(event) {
+      var x = event.clientX;
+      var y = event.clientY;
+      var coords = "X coords: " + x + ", Y coords: " + y;
+      
+      document.getElementById("demo").innerHTML = coords;
+
+
+      var elementStyle = document.getElementById("pin-image-selbst-"+z).style;
+      document.getElementById("pin-image-selbst-"+z).style.display= "block";
+      
+      
+      elementStyle.position = "absolute";
+       
+      elementStyle.left = event.clientX -10 +"px";
+      elementStyle.top = event.clientY   +2+"px";
+      z++;
+
+    }
+
+    </script>
+    
   <a href="Bewertung.html">
-  <img class="Pin"
+  <img id="pin image dauerhaft"
+    class="Pin"
     src="../Bilder/Pin.png"
     width="40"
     height="40" 
@@ -67,11 +122,41 @@
     usemap="#Pin"
   />
  </a>
-</map>
-</a>
+ <!-- <body>
+  <div>
+      <h1>Bewertung erstellen</h1>
+      <h3>Click on the button to see image</h3>
 
+ 
+      <img id="image" class="map"
+      src= "Bilder/Thailand.png"
+      width="3000"
+      height="2000"
+      alt="GFG image"
+      usemap="#Thailand" />
+  </div>
+
+  <button type="button"
+      onclick="show()" id="btnID">
+      Bewertung erstellen
+  </button>
   
-  
+  <script>
+  var hidden = true;
+      function show() {
+        if(!hidden)
+  {
+    document.getElementById("image").style.display = "none";
+    document.getElementById("btnID").innerHTML = "Bewertung erstellen";
+  }
+  else
+  {
+    document.getElementById("image").style.display = "block";
+    document.getElementById("btnID").innerHTML = "ausblenden";
+  }
+  hidden = !hidden;
+      }
+  </script> -->
   
 
 
