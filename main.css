@@ -47,7 +47,24 @@ color: #fff;
     max-width: 50%;
     height: auto;
 }
+.Bewertung{
+  color: rgb(0, 119, 255);
+}
+.Pin{
+ position:absolute;
+  top:557px;
+  left:655px;
+}
+#pin-image-selbst-0 {display:none; }
+#pin-image-selbst-1 {display:none; }
+#pin-image-selbst-2 {display:none; }
+#pin-image-selbst-3 {display:none; }
+#pin-image-selbst-4 {display:none; }
+#pin-image-selbst-5 {display:none; }
 
+#image {
+  display: none;
+}
 /* login */
 .box-form {
   margin: 0 auto;
