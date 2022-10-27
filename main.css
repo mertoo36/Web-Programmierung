@@ -20,7 +20,10 @@ body {
 color: #fff;
 
 }
-
+.structure{
+justify-content: flex-start;
+display: flex;
+}
 .weltkarte{
   animation: colorize 1s cubic-bezier(0, 0, .78, .36) 1;
   background: rgba(149, 226, 240, 0.951);
