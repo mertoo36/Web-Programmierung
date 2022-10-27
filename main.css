@@ -81,6 +81,7 @@ display: flex;
 #image {
   display: none;
 }
+#bewertung-überschrift{display:none}
 #bewertung-eingeben {display:none}
 .bewertung-eingebenc {
   width: 100%;

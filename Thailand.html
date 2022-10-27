@@ -71,6 +71,7 @@
       var TextStyle = document.getElementById("bewertung-eingeben").style;
       document.getElementById("bewertung-eingeben").style.display ="block";
       document.getElementById("button-bewertung-absenden").style.display ="block";
+      document.getElementById("bewertung-überschrift").style.display="block";
     }
     </script>
 <form action="bewerten-0.html">
@@ -86,11 +87,11 @@
 <form action="bewerten-5.html">
 <input type="image" src="Bilder/Pin.png" id = "id_5"/>
 </form>
-
+  <h2 id = "bewertung-überschrift">Gebe hier deine Bewertung ein</h2>
      <form>
       <input id ="bewertung-eingeben" class ="bewertung-eingebenc"></input>
     </form>
-    <button id = "button-bewertung-absenden" onclick="bewertungabsenden(event)">Click me</button>
+    <button id = "button-bewertung-absenden" onclick="bewertungabsenden(event)">Bewertung erstellen</button>
 
     <script>
       var c=0;
@@ -98,6 +99,7 @@
       var text =document.getElementById("bewertung-eingeben").value;  
       document.getElementById("bewertung-eingeben").style.display ="none";
       document.getElementById("button-bewertung-absenden").style.display ="none";
+      document.getElementById("bewertung-überschrift").style.display="none";
       localStorage.setItem("bewertungText",text);
       window.open("bewerten-"+c+".html","popup");
       c++;
