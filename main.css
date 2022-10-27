@@ -50,7 +50,7 @@ display: flex;
   padding-right: 80px;
   padding-bottom: 40px;
   padding-left: 80px;
-  float: ;
+  float: "";
 }
 
 .map{
@@ -68,19 +68,33 @@ display: flex;
 }
 .Pin{
  position:absolute;
-  top:557px;
-  left:655px;
+  top:548px;
+  left:654px;
 }
-#pin-image-selbst-0 {display:none; }
-#pin-image-selbst-1 {display:none; }
-#pin-image-selbst-2 {display:none; }
-#pin-image-selbst-3 {display:none; }
-#pin-image-selbst-4 {display:none; }
-#pin-image-selbst-5 {display:none; }
+#id_0 {display:none; width: 40px;height: auto;}
+#id_1 {display:none; width: 40px;height: auto;}
+#id_2 {display:none; width: 40px;height: auto;}
+#id_3 {display:none; width: 40px;height: auto;}
+#id_4 {display:none; width: 40px;height: auto;}
+#id_5 {display:none; width: 40px;height: auto;}
 
 #image {
   display: none;
 }
+#bewertung-eingeben {display:none}
+.bewertung-eingebenc {
+  width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid rgb(103, 118, 234);
+        border-radius: 4px;
+        background-color: #ffffff;
+        font-size: 16px;
+        resize: none;
+        margin: 10px;
+}
+#button-bewertung-absenden {display:none}
 
 /*slideshow*/
 * {box-sizing: border-box}

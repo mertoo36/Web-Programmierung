@@ -4,44 +4,52 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Travel-Finder</title>
+    
+    <style>
+
+    </style>
     <meta name="description" content="Finde dein nächstes Urlaubsziel." />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
+        <!-- Navbar Sectionk -->
+        <nav class="navbar">
+            <div class="navbar__container">
+              <a href="index.html" id="navbar__logo">Travel Finder</a>
+              <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+              <ul class="navbar__menu">
+                <li class="navbar__item">
+                  <a href="map.html" class="navbar__links" id="home-page">Map</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#about" class="navbar__links" id="about-page">Über Uns</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#services" class="navbar__links" id="services-page"
+                    >Produkte</a
+                  >
+                </li>
+                <li class="navbar__btn">
+                  <a href="login.html" class="button" id="signup">Anmelden</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+            <!--Website-->  
+            
+            <h2>Bewertungen:</h2>
+      <body onLoad="bewertungempfangen()"></body> 
+        <script>
+          function bewertungempfangen(){
+            var number = localStorage.getItem("bewertungText");          
+            document.getElementById("myText").innerHTML = number;
+          }
+        </script>
+        <span id="myText"></span>
 
-    <!-- Navbar Section -->
-    <nav class="navbar">
-      <div class="navbar__container">
-        <a href="index.html" id="navbar__logo">Travel Finder</a>
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span> <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="map.html" class="navbar__links" id="home-page">Map</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#about" class="navbar__links" id="about-page">Über Uns</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#services" class="navbar__links" id="services-page"
-              >Produkte</a
-            >
-          </li>
-          <li class="navbar__btn">
-            <a href="login.html" class="button" id="signup">Anmelden</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-
-
-    <!--Website-->
- 
-
-    
     <!-- Footer Section -->  
     <footer class="footer">
       <div class="footer__addr">
@@ -76,7 +84,7 @@
           </ul>
         </li> 
         <li class="nav__item">
-          <h2 class="nav__title">Rechtliches</h2>
+          <h2 class="nav__title">Legal</h2>
           <ul class="nav__ul">
             <li>
               <a href="#">Impressum</a>
@@ -94,6 +102,6 @@
         </div>
       </div>
     </footer>
-    <script src="app.js"></script>
   </body>
 </html>
+

@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Travel-Finder</title>
     <meta name="description" content="Finde dein nächstes Urlaubsziel." />
     <link rel="stylesheet" href="main.css" />
 
-      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-0" width="40" height="40" />
-      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-1" width="40" height="40" />
-      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-2" width="40" height="40" />
-      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-3" width="40" height="40" />
-      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-4" width="40" height="40" />
-      <img src="../Bilder/Pin.png"class="Pin2" alt="Pin"id="pin-image-selbst-5" width="40" height="40" />
+     
        
   </head>
   <body>
@@ -59,28 +55,59 @@
     usemap="#Thailand"
   />
   
-  <p id="demo"></p>
+  
   <script>
     var z=0;
     function bewertungerstellen(event) {
-      var x = event.clientX;
-      var y = event.clientY;
-      var coords = "X coords: " + x + ", Y coords: " + y;
+      var id = "id_"+z;
+      var BildStyle = document.getElementById(id).style;
+      BildStyle.display= "block";
+      BildStyle.position ="absolute";
+      BildStyle.left = event.clientX -10 + "px";
+      BildStyle.top = event.clientY -45+ "px";
+      var id_0;var id_2;var id_3;var id_4;var id_5;
 
-
-      var elementStyle = document.getElementById("pin-image-selbst-"+z).style;
-      document.getElementById("pin-image-selbst-"+z).style.display= "block";
-      
-      
-      elementStyle.position = "absolute";
-       
-      elementStyle.left = event.clientX -10 +"px";
-      elementStyle.top = event.clientY   +2+"px";
       z++;
-      window.open('bewerten.html','PopUp','width=480,height=120'); 
+      var TextStyle = document.getElementById("bewertung-eingeben").style;
+      document.getElementById("bewertung-eingeben").style.display ="block";
+      document.getElementById("button-bewertung-absenden").style.display ="block";
     }
-
     </script>
+<form action="bewerten-0.html">
+<input type="image" src="Bilder/Pin.png" id = "id_0"/></form>
+<form action="bewerten-1.html">
+<input type="image" src="Bilder/Pin.png" id = "id_1"/></form>
+<form action="bewerten-2.html">
+<input type="image" src="Bilder/Pin.png" id = "id_2"/></form>
+<form action="bewerten-3.html">
+<input type="image" src="Bilder/Pin.png" id = "id_3"/></form>
+<form action="bewerten-4.html">
+<input type="image" src="Bilder/Pin.png" id = "id_4"/></form>
+<form action="bewerten-5.html">
+<input type="image" src="Bilder/Pin.png" id = "id_5"/>
+</form>
+
+     <form>
+      <input id ="bewertung-eingeben" class ="bewertung-eingebenc"></input>
+    </form>
+    <button id = "button-bewertung-absenden" onclick="bewertungabsenden(event)">Click me</button>
+
+    <script>
+      var c=0;
+    function bewertungabsenden(event) {
+      var text =document.getElementById("bewertung-eingeben").value;  
+      document.getElementById("bewertung-eingeben").style.display ="none";
+      document.getElementById("button-bewertung-absenden").style.display ="none";
+      localStorage.setItem("bewertungText",text);
+      window.open("bewerten-"+c+".html","popup");
+      c++;
+      
+      
+    }
+    </script>
+    
+
+
 
 <div class="slideshow-container">
   <div class="mySlides">
@@ -101,7 +128,7 @@
     class="Pin"
     src="../Bilder/Pin.png"
     width="40"
-    height="40" 
+    height="auto" 
     alt="Pin"
     usemap="#Pin"
   />
