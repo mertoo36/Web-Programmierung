@@ -1,0 +1,120 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Travel-Finder</title>
+    <meta name="description" content="Finde dein nächstes Urlaubsziel." />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- Navbar Sectionk -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo">Travel Finder</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="map.html" class="navbar__links" id="home-page">Map</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="about-page">Über Uns</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#services" class="navbar__links" id="services-page"
+              >Produkte</a
+            >
+          </li>
+          <li class="navbar__btn">
+            <a href="login.html" class="button" id="signup">Anmelden</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <!--Website-->
+        <div class="container">
+          <h1>Registrierung</h1>
+          <p>Füllen Sie bitte alle Felder aus.</p>
+          <hr>
+      
+         <b>Email</b>
+          <input type="text" placeholder="Email eingeben" name="email" id="email" required>
+      
+        <b>Passwort</b>
+          <input type="password" placeholder="Passwort eingeben" name="psw" id="psw" required>
+      
+         <b>Passwort wiederholen</b>
+          <input type="password" placeholder="Passwort wiederholen" id="psw-repeat" required>
+          <hr>
+      
+          <p>Wenn Sie den Account erstellen stimmen Sie unseren <a href="#">Datenschutzbedingungen</a> zu.</p>
+          <button onclick="location.href='index.html'" type="submit" class="registerbtn">Registrieren</button>
+        </div>
+      
+        <div class="container signin">
+          <p>Haben Sie bereits einen Account? <a href="#">Anmelden</a>.</p>
+        </div>
+      </form>
+
+
+    <!-- Footer Section -->  
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">Travel-Finder</h1>
+        <h2>Anschrift</h2>
+        <address>
+          Coblitzallee 1-9, 68163 Mannheim<br>    
+          <a class="footer__btn" href="mailto:wolf.mert@web.de">Email</a>
+        </address>
+      </div>
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Über Uns</h2>
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Das Team</a>
+            </li>
+          </ul>
+        </li> 
+        <li class="nav__item">
+          <h2 class="nav__title">Das Unternehmen</h2>
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="#">Historie</a>
+            </li>
+            <li>
+              <a href="#">Philosophie</a>
+            </li>
+            <li>
+              <a href="#">Anschrift</a>
+            </li>
+          </ul>
+        </li> 
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Impressum</a>
+            </li> 
+            <li>
+              <a href="#">Datenschutzerklärung</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="legal">
+        <p>&copy; 2022 Travel-Finder. All rights reserved.</p>
+        <div class="legal__links">
+          <span>Made with <span class="heart">♥</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
