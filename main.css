@@ -6,6 +6,18 @@ html {
   background-color: rgb(180, 180, 180);
 
 }
+.links{
+  float: left;
+
+}
+.rechts{
+
+  float: right;
+}
+h5{
+font-size: smaller;
+
+}
 body {
   background: rgba(255, 254, 254, 0.948);
     background-size: auto;
@@ -38,6 +50,7 @@ display: flex;
   padding-right: 80px;
   padding-bottom: 40px;
   padding-left: 80px;
+  float: ;
 }
 
 .map{
