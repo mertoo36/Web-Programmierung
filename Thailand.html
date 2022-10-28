@@ -64,8 +64,8 @@
       var BildStyle = document.getElementById("id_"+z).style;
       BildStyle.display= "block";
       BildStyle.position ="absolute";
-      BildStyle.left = event.clientX -10 + "px";
-      BildStyle.top = event.clientY -45+ "px";
+      BildStyle.left = event.clientX -10 +"px";
+      BildStyle.top = event.clientY + window.scrollY -45+ "px";
       
       z++;
       var TextStyle = document.getElementById("bewertung-eingeben").style;

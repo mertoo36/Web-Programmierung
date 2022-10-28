@@ -97,6 +97,16 @@ display: flex;
 }
 #button-bewertung-absenden {display:none}
 
+
+/*bewertung in bewertung erstellen*/
+
+#bewertung-eingeben2 {display:none}
+#Bewertung-speichern {display:none}
+#myText-1 {display:block}
+#myText-2 {display:none}
+#myText-3 {display:none}
+#myText-4 {display:none}
+
 /*slideshow*/
 * {box-sizing: border-box}
 img {vertical-align: middle;}

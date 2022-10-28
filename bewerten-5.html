@@ -41,14 +41,77 @@
             <!--Website-->  
             
             <h2>Bewertungen:</h2>
-      <body onLoad="bewertungempfangen()"></body> 
+            
+            
+            <script>
+              window.onload = function(){
+                bewertungempfangen()
+                bewertungladen()
+                //deelteStore()
+              }
+            </script>
+      
+      
+      
+      <script>
+      function deelteStore(){localStorage.clear()}
+      </script>
+
+
+
+      <script>
+      function bewertungladen(){
+        if (!(localStorage.getItem("bewertung-52") === null)) {var text2 = localStorage.getItem("bewertung-52"); document.getElementById("myText-2").style.display ="block";document.getElementById("myText-2").innerHTML = "Bewertung 2: "+text2;}
+        if (!(localStorage.getItem("bewertung-53") === null)) { var text3 = localStorage.getItem("bewertung-53");document.getElementById("myText-3").style.display ="block"; document.getElementById("myText-3").innerHTML = "Bewertung 3: "+text3;}
+        if (!(localStorage.getItem("bewertung-54") === null)) {var text4 = localStorage.getItem("bewertung-54"); document.getElementById("myText-4").style.display ="block"; document.getElementById("myText-4").innerHTML = "Bewertung 4: "+text4;}
+        if (!(localStorage.getItem("bewertung-55") === null)) { var text5 = localStorage.getItem("bewertung-55"); document.getElementById("myText-5").style.display ="block";document.getElementById("myText-5").innerHTML = "Bewertung 5: "+text5;}
+        if (!(localStorage.getItem("bewertung-56") === null)) {var text6 = localStorage.getItem("bewertung-56");document.getElementById("myText-6").style.display ="block";document.getElementById("myText-6").innerHTML = "Bewertung 6: "+text6;}
+        if (!(localStorage.getItem("bewertung-57") === null)) {var text7 = localStorage.getItem("bewertung-57"); document.getElementById("myText-7").style.display ="block";document.getElementById("myText-7").innerHTML = "Bewertung 7: "+text7;}
+        if (!(localStorage.getItem("bewertungText-5") === null)) {text1 =localStorage.getItem("bewertungText-55"); document.getElementById("myText-1").innerHTML = "Bewertung 1: "+text1;}
+      }
+      </script>
+
         <script>
           function bewertungempfangen(){
             var number = localStorage.getItem("bewertungText-5");          
-            document.getElementById("myText").innerHTML = number;
+            document.getElementById("myText-1").innerHTML = "Bewertung 1: "+number;
           }
         </script>
-        <span id="myText"></span>
+        
+        <script>
+            function bewertungerstellen(event){
+              document.getElementById("bewertung-eingeben2").style.display ="block";
+              document.getElementById("bewertung-erstellen2").style.display ="none";
+              document.getElementById("Bewertung-speichern").style.display="block";
+              
+            }var c =2;
+            function bewertungspeichern(event){
+              
+              document.getElementById("bewertung-eingeben2").style.display ="none";
+              document.getElementById("bewertung-erstellen2").style.display ="block";
+              document.getElementById("Bewertung-speichern").style.display="none";
+              var text =document.getElementById("bewertung-eingeben2").value;
+              document.getElementById("myText-"+c).style.display ="block"; 
+              document.getElementById("myText-"+c).innerHTML = "Bewertung " + c + ": "+ text;
+              document.getElementById("bewertung-eingeben2").value="";
+              localStorage.setItem("bewertung-5"+c,text);
+              c++;
+            }
+           
+
+        </script>
+        <h3 id="myText-1"></h3>
+        <h3 id="myText-2"></h3>
+        <h3 id="myText-3"></h3>
+        <h3 id="myText-4"></h3>
+        <h3 id="myText-5"></h3>
+        <h3 id="myText-6"></h3>
+        <h3 id="myText-7"></h3>
+        <button id = "bewertung-erstellen2" onclick="bewertungerstellen(event)">Bewertung erstellen</button>
+        <h3>
+          <input id ="bewertung-eingeben2" class ="bewertung-eingebenc"></input>
+        </h3>
+        <button id = "Bewertung-speichern"onclick="bewertungspeichern(event)">Bewertung speichern</button>
 
     <!-- Footer Section -->  
     <footer class="footer">
