@@ -59,14 +59,14 @@
   <script>
     var z=0;
     function bewertungerstellen(event) {
-      var id = "id_"+z;
-      var BildStyle = document.getElementById(id).style;
+      
+      
+      var BildStyle = document.getElementById("id_"+z).style;
       BildStyle.display= "block";
       BildStyle.position ="absolute";
       BildStyle.left = event.clientX -10 + "px";
       BildStyle.top = event.clientY -45+ "px";
-      var id_0;var id_2;var id_3;var id_4;var id_5;
-
+      
       z++;
       var TextStyle = document.getElementById("bewertung-eingeben").style;
       document.getElementById("bewertung-eingeben").style.display ="block";
@@ -94,15 +94,17 @@
     <button id = "button-bewertung-absenden" onclick="bewertungabsenden(event)">Bewertung erstellen</button>
 
     <script>
-      var c=0;
+      
     function bewertungabsenden(event) {
+      var h =z-1;
       var text =document.getElementById("bewertung-eingeben").value;  
       document.getElementById("bewertung-eingeben").style.display ="none";
       document.getElementById("button-bewertung-absenden").style.display ="none";
       document.getElementById("bewertung-überschrift").style.display="none";
-      localStorage.setItem("bewertungText",text);
-      window.open("bewerten-"+c+".html","popup");
-      c++;
+      localStorage.setItem("bewertungText-"+h,text);
+      document.getElementById("bewertung-eingeben").value="";
+      window.open("bewerten-"+h+".html");
+      
       
       
     }
