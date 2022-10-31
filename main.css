@@ -53,7 +53,7 @@ display: flex;
   float: "";
 }
 
-.karte{
+.map{
     animation: colorize 1s cubic-bezier(0, 0, .78, .36) 1;
     background: rgba(149, 216, 228, 0.552);
     border: 5px solid rgba(23, 22, 24, 0.696);
@@ -548,7 +548,7 @@ a {
     box-shadow: 0px 0px 10px #C8C7D9;
     position: relative;
   }
-  .container .map {
+  .container .googlemaps {
     width: 45%;
     float: left;
   }
