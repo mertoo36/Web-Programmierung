@@ -1,5 +1,6 @@
 html { 
   background: url(../Bilder/background.jpg) no-repeat center center fixed; 
+  box-sizing: border-box;
 }
 
 .bild:hover{
@@ -30,8 +31,8 @@ body {
 }
 .button{
 color: #fff;
-
 }
+
 .structure{
 justify-content: flex-start;
 display: flex;
@@ -589,4 +590,72 @@ a {
     font-weight: 700;
     margin: 2% 8%;
     border: none;
+  }
+
+  /*Über uns*/
+
+
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    margin-left: 80px;
+    float: inline-start;
+    width: 40%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  .fotos{
+
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(149, 226, 240);
+    color: white;
+  }
+  
+  .containerabout {
+    padding: 0 16px;
+  }
+  
+  .containerabout::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
   }
