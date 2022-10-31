@@ -127,8 +127,11 @@
               var durchschnitt = zusam / zähler;
              
               document.getElementById("durchschnitt").innerHTML = "Durchschnittliche Sternebewertung: "+durchschnitt.toFixed(2);
-  
-             
+              if(durchschnitt>=4.5){var st = new Image();st.src="Bilder/5Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=171+"px";document.body.appendChild(st);}
+              else if (durchschnitt>=3.5){var st = new Image();st.src="Bilder/4Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=168+"px";document.body.appendChild(st);}
+              else if (durchschnitt>=2.5){var st = new Image();st.src="Bilder/3Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=169+"px";document.body.appendChild(st);}
+              else if (durchschnitt>=1.5){var st = new Image();st.src="Bilder/2Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=168+"px";document.body.appendChild(st);}
+              else{var st = new Image();st.src="Bilder/1Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=169+"px";document.body.appendChild(st);}
               }
          }}
         
