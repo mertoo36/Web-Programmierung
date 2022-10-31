@@ -539,7 +539,7 @@ a {
   .footer__nav {
     flex: 2 0px;
   }
-  
+    /*Kontakt Seite*/
   .container {
     background: #F8F8F8;
     width: 900px;
@@ -582,7 +582,7 @@ a {
     color: #242424;
   }
   .container .contact-form .btn-send {
-    background: #A383C9;
+    background: rgb(149, 226, 240);
     width: 180px;
     height: 60px;
     color: #F8F8F8;
