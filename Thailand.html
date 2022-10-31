@@ -42,9 +42,33 @@
 
 
     <!--Website-->
+    <script>
+      window.onload = function(){
+        deletePinStorage()   
+      }
+    </script>
+
+<script>
+function deletePinStorage(){
+  for(let i =0; i<6; i++){
+  if(document.getElementById("id_"+i).style.display = "none"){
+    localStorage.clear();
+    localStorage.removeItem("bewertungText-"+i);
+    localStorage.removeItem("star-"+i+"1")
+    localStorage.removeItem("bewertung-"+i+"2");localStorage.removeItem("bewertung-"+i+"3");localStorage.removeItem("bewertung-"+i+"2");localStorage.removeItem("bewertung-"+i+"4");localStorage.removeItem("bewertung-"+i+"5");localStorage.removeItem("bewertung-"+i+"6");localStorage.removeItem("bewertung-"+i+"7");
+    localStorage.removeItem("star-"+i+"2");localStorage.removeItem("star-"+i+"3");localStorage.removeItem("star-"+i+"4");localStorage.removeItem("star-"+i+"5");localStorage.removeItem("star-"+i+"6");localStorage.removeItem("star-"+i+"7");
+    localStorage.removeItem("mehranzeigen-"+i+"2");localStorage.removeItem("mehranzeigen-"+i+"3");localStorage.removeItem("mehranzeigen-"+i+"4");localStorage.removeItem("mehranzeigen-"+i+"5");localStorage.removeItem("mehranzeigen-"+i+"6");localStorage.removeItem("mehranzeigen-"+i+"7");
+    for(let l =0;l<6;l++){
+      for (let o =0;o<8;o++){
+        localStorage.removeItem("imgStern-"+i+l+o);
+      }
+    }
+    
+  }
+}}
+</script>
 
     <button onclick="location.href='Asien.html'" type="button">Zurück</button>
-    
     <img 
     onclick="bewertungerstellen(event)"
     class ="map"
@@ -72,6 +96,7 @@
       document.getElementById("bewertung-eingeben").style.display ="block";
       document.getElementById("button-bewertung-absenden").style.display ="block";
       document.getElementById("bewertung-überschrift").style.display="block";
+      window.scrollBy(0,665-window.scrollY);
     }
     </script>
 <form action="bewerten-0.html">
@@ -89,7 +114,7 @@
 </form>
   <h2 id = "bewertung-überschrift">Gebe hier deine Bewertung ein</h2>
      <form>
-      <input id ="bewertung-eingeben" class ="bewertung-eingebenc"></input>
+      <textarea id ="bewertung-eingeben" class ="bewertung-eingebenc"></textarea>
     </form>
     <button id = "button-bewertung-absenden" onclick="bewertungabsenden(event)">Bewertung erstellen</button>
 
@@ -104,9 +129,7 @@
       localStorage.setItem("bewertungText-"+h,text);
       document.getElementById("bewertung-eingeben").value="";
       window.open("bewerten-"+h+".html");
-      
-      
-      
+       
     }
     </script>
     
@@ -159,7 +182,7 @@
         </li> 
         <li class="nav__item">
           <h2 class="nav__title">Das Unternehmen</h2>
-          <ul class="nav__ul nav__ul--extra">
+          <ul class="nav_ul nav_ul--extra">
             <li>
               <a href="#">Historie</a>
             </li>
@@ -193,6 +216,3 @@
     <script src="app.js"></script>
   </body>
 </html>
-
-
-
