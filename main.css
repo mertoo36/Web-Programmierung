@@ -241,7 +241,6 @@ top: 0;
   width: auto;
 }
 .box-form .right button {
-  float: right;
   color: #fff;
   font-size: 16px;
   padding: 12px 35px;
@@ -376,7 +375,6 @@ a {
   background-color: #ffffff;
   background: url(../Bilder/logo.png);
   background-size: 100%;
-  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   display: flex;
@@ -613,9 +611,6 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
   }
-  .fotos{
-
-  }
   
   .about-section {
     padding: 50px;
@@ -716,14 +711,7 @@ a {
     
     
   }
-  .sterne{
-    
-    
-  }
-  .pos{
-   
-   
-  }
+
   .posBew{
     float:left;
     margin-left: 20px;
@@ -743,12 +731,7 @@ a {
     .mehranzeigen{
       margin-top: 31px;
     }
-    
-    
-  
-  
-  
-  
+
   .durchschnitt{
     float:inline-end;
     display: block;
