@@ -4,10 +4,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Travel-Finder</title>
-    
-    <style>
-
-    </style>
     <meta name="description" content="Finde dein nächstes Urlaubsziel." />
     <link rel="stylesheet" href="main.css" />
   </head>
@@ -39,80 +35,357 @@
             </div>
           </nav>
             <!--Website-->  
-            
-            <h2>Bewertungen:</h2>
-            
+
+            <div class="pos">
+              <div class="posBew">
+                <h2>Bewertungen</h2>
+                  <div class="bewertung">
+                    <p id="myText-1"></p>
+                  </div>
+                  <div class="bewertung">
+                    <p id="myText-2"></p>
+                  </div>
+                  <div class="bewertung">
+                    <p id="myText-3"></p>
+                  </div>
+                  <div class="bewertung">
+                    <p id="myText-4"></p>
+                  </div>
+                  <div class="bewertung">
+                    <p id="myText-5"></p>
+                  </div>
+                  <div class="bewertung">
+                    <p id="myText-6"></p>
+                  </div>
+                  <div class="bewertung">
+                    <p id="myText-7"></p>
+                  </div>
+              </div>
+              <div class ="posmehranzeigen">
+                <h2></h2>
+                  <div class ="mehranzeigen">
+                    <button class = "mehranzeigenbutton" onclick="MehrAnzeigen(this.id)" id = "mehrAnzeigenButton-1">Mehr anzeigen</button>
+                  </div>
+                  <div class ="mehranzeigen">
+                    <button class = "mehranzeigenbutton" onclick="MehrAnzeigen(this.id)" id = "mehrAnzeigenButton-2">Mehr anzeigen</button>
+                  </div>
+                  <div class ="mehranzeigen">
+                    <button class = "mehranzeigenbutton" onclick="MehrAnzeigen(this.id)" id = "mehrAnzeigenButton-3">Mehr anzeigen</button>
+                  </div>
+                  <div class ="mehranzeigen">
+                    <button  class = "mehranzeigenbutton" onclick="MehrAnzeigen(this.id)" id = "mehrAnzeigenButton-4">Mehr anzeigen</button>
+                  </div>
+                  <div class ="mehranzeigen">
+                    <button class = "mehranzeigenbutton" onclick="MehrAnzeigen(this.id)" id = "mehrAnzeigenButton-5">Mehr anzeigen</button>
+                  </div>
+                  <div class ="mehranzeigen">
+                    <button class = "mehranzeigenbutton" onclick="MehrAnzeigen(this.id)" Id = "mehrAnzeigenButton-6">Mehr anzeigen</button>
+                  </div>
+                  <div class ="mehranzeigen">
+                    <button class = "mehranzeigenbutton" onclick="MehrAnzeigen(this.id)" Id = "mehrAnzeigenButton-7">Mehr anzeigen</button>
+                  </div>            
+              </div>
+              <div class="durchschnitt">
+                <h2></h2>
+                  <div>
+                    <p id = "durchschnitt"style="display: flex;">Noch keine Bewertungen</p>
+                  </div> 
+              </div>
+            </div>
+            <button class = "bewertungsbutton"id = "bewertung-erstellen2" onclick="bewertungerstellen(event)">Bewertung erstellen</button>
+              <h3>
+                <textarea id ="bewertung-eingeben2" class ="bewertung-eingebenc"></textarea>
+              </h3>
+              <body>
+                <div 
+                  class="star-container star-container-1" id="star-container">
+                </div> 
+              </body>
+            </div>
+            <button class ="mehranzeigenbutton"id = "Bewertung-speichern"onclick="bewertungspeichern(event)">Bewertung speichern</button>
             
             <script>
-              window.onload = function(){
-                bewertungempfangen()
+              window.onload = function(){       
                 bewertungladen()
-                //deelteStore()
+                bewertungempfangen()
+                durchschnittSterne()
               }
-            </script>
-      
-      
-      
-      <script>
-      function deelteStore(){localStorage.clear()}
-      </script>
-
-
-
-      <script>
-      function bewertungladen(){
-        if (!(localStorage.getItem("bewertung-32") === null)) {var text2 = localStorage.getItem("bewertung-32"); document.getElementById("myText-2").style.display ="block";document.getElementById("myText-2").innerHTML = "Bewertung 2: "+text2;}
-        if (!(localStorage.getItem("bewertung-33") === null)) { var text3 = localStorage.getItem("bewertung-33");document.getElementById("myText-3").style.display ="block"; document.getElementById("myText-3").innerHTML = "Bewertung 3: "+text3;}
-        if (!(localStorage.getItem("bewertung-34") === null)) {var text4 = localStorage.getItem("bewertung-34"); document.getElementById("myText-4").style.display ="block"; document.getElementById("myText-4").innerHTML = "Bewertung 4: "+text4;}
-        if (!(localStorage.getItem("bewertung-35") === null)) { var text5 = localStorage.getItem("bewertung-35"); document.getElementById("myText-5").style.display ="block";document.getElementById("myText-5").innerHTML = "Bewertung 5: "+text5;}
-        if (!(localStorage.getItem("bewertung-36") === null)) {var text6 = localStorage.getItem("bewertung-36");document.getElementById("myText-6").style.display ="block";document.getElementById("myText-6").innerHTML = "Bewertung 6: "+text6;}
-        if (!(localStorage.getItem("bewertung-37") === null)) {var text7 = localStorage.getItem("bewertung-37"); document.getElementById("myText-7").style.display ="block";document.getElementById("myText-7").innerHTML = "Bewertung 7: "+text7;}
-        if (!(localStorage.getItem("bewertungText-3") === null)) {text1 =localStorage.getItem("bewertungText-3"); document.getElementById("myText-1").innerHTML = "Bewertung 1: "+text1;}
-      }
-      </script>
-
-        <script>
-          function bewertungempfangen(){
-            var number = localStorage.getItem("bewertungText-3");          
-            document.getElementById("myText-1").innerHTML = "Bewertung 1: "+number;
-          }
-        </script>
+     
+        function durchschnittSterne(){
+          var zusam = 0;
+          var zähler = 0;
+          for(var w=1; w<8;w++){
+            if(!(localStorage.getItem("star-3"+w) === null)) {   //Hier 
+              zähler++;
+              var b = localStorage.getItem("star-3"+w); //Hier
+              zusam = Number(zusam) + Number(b);
+              var durchschnitt = zusam / zähler;
+              document.getElementById("durchschnitt").innerHTML = "Durchschnittliche Sternebewertung: "+durchschnitt.toFixed(2);
+              if(durchschnitt>=4.5){var st = new Image();st.src="Bilder/5Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=171+"px";document.body.appendChild(st);}
+              else if (durchschnitt>=3.5){var st = new Image();st.src="Bilder/4Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=168+"px";document.body.appendChild(st);}
+              else if (durchschnitt>=2.5){var st = new Image();st.src="Bilder/3Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=169+"px";document.body.appendChild(st);}
+              else if (durchschnitt>=1.5){var st = new Image();st.src="Bilder/2Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=168+"px";document.body.appendChild(st);}
+              else{var st = new Image();st.src="Bilder/1Stern.png";st.style.position="absolute";st.style.width=110+"px";st.style.height="auto";st.style.left=1125+"px";st.style.top=169+"px";document.body.appendChild(st);}
+              }
+         }
+        }
         
-        <script>
+     
+      function bewertungladen(){
+        if (!(localStorage.getItem("bewertung-31") === null)) {var text1 = localStorage.getItem("bewertung-31");document.getElementById("myText-1").innerHTML = "Bewertung 1: "+text1;};
+        if (!(localStorage.getItem("bewertung-32") === null)) {var text2 = localStorage.getItem("bewertung-32");document.getElementById("myText-2").style.display ="block";document.getElementById("myText-2").innerHTML = "Bewertung 2: "+text2;}  //Hier
+        if (!(localStorage.getItem("bewertung-33") === null)) {var text3 = localStorage.getItem("bewertung-33");document.getElementById("myText-3").style.display ="block";document.getElementById("myText-3").innerHTML = "Bewertung 3: "+text3;}
+        if (!(localStorage.getItem("bewertung-34") === null)) {var text4 = localStorage.getItem("bewertung-34");document.getElementById("myText-4").style.display ="block";document.getElementById("myText-4").innerHTML = "Bewertung 4: "+text4;}
+        if (!(localStorage.getItem("bewertung-35") === null)) {var text5 = localStorage.getItem("bewertung-35");document.getElementById("myText-5").style.display ="block";document.getElementById("myText-5").innerHTML = "Bewertung 5: "+text5;}
+        if (!(localStorage.getItem("bewertung-36") === null)) {var text6 = localStorage.getItem("bewertung-36");document.getElementById("myText-6").style.display ="block";document.getElementById("myText-6").innerHTML = "Bewertung 6: "+text6;}
+        if (!(localStorage.getItem("bewertung-37") === null)) {var text7 = localStorage.getItem("bewertung-37");document.getElementById("myText-7").style.display ="block";document.getElementById("myText-7").innerHTML = "Bewertung 7: "+text7;}
+        if (!(localStorage.getItem("star-31") === null)) {document.getElementById("star-container").style.display="none";}
+        
+        if (!(localStorage.getItem("bewertung-31") === null)) {if (!(localStorage.getItem("mehranzeigen-31") === null)) {document.getElementById("mehrAnzeigenButton-1").style.display="block";}else{document.getElementById("mehrAnzeigenButton-1").style.display="block";document.getElementById("mehrAnzeigenButton-1").style.visibility="hidden";}}
+        if (!(localStorage.getItem("bewertung-32") === null)) {if (!(localStorage.getItem("mehranzeigen-32") === null)) {document.getElementById("mehrAnzeigenButton-2").style.display="block";}else{document.getElementById("mehrAnzeigenButton-2").style.display="block";document.getElementById("mehrAnzeigenButton-2").style.visibility="hidden";}}//Hier
+        if (!(localStorage.getItem("bewertung-33") === null)) {if (!(localStorage.getItem("mehranzeigen-33") === null)) {document.getElementById("mehrAnzeigenButton-3").style.display="block";}else{document.getElementById("mehrAnzeigenButton-3").style.display="block";document.getElementById("mehrAnzeigenButton-3").style.visibility="hidden";}}
+        if (!(localStorage.getItem("bewertung-34") === null)) {if (!(localStorage.getItem("mehranzeigen-34") === null)) {document.getElementById("mehrAnzeigenButton-4").style.display="block";}else{document.getElementById("mehrAnzeigenButton-4").style.display="block";document.getElementById("mehrAnzeigenButton-4").style.visibility="hidden";}}
+        if (!(localStorage.getItem("bewertung-35") === null)) {if (!(localStorage.getItem("mehranzeigen-35") === null)) {document.getElementById("mehrAnzeigenButton-5").style.display="block";}else{document.getElementById("mehrAnzeigenButton-5").style.display="block";document.getElementById("mehrAnzeigenButton-5").style.visibility="hidden";}}
+        if (!(localStorage.getItem("bewertung-36") === null)) {if (!(localStorage.getItem("mehranzeigen-36") === null)) {document.getElementById("mehrAnzeigenButton-6").style.display="block";}else{document.getElementById("mehrAnzeigenButton-6").style.display="block";document.getElementById("mehrAnzeigenButton-6").style.visibility="hidden";}}
+        if (!(localStorage.getItem("bewertung-37") === null)) {if (!(localStorage.getItem("mehranzeigen-37") === null)) {document.getElementById("mehrAnzeigenButton-7").style.display="block";}else{document.getElementById("mehrAnzeigenButton-7").style.display="block";document.getElementById("mehrAnzeigenButton-7").style.visibility="hidden";}}
+
+        
+        if (!(localStorage.getItem("imgStern-311") === null)){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-312") === null)){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-313") === null)){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-314") === null)){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-315") === null)){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-316") === null)){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-317") === null)){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-321") === null)){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-322") === null)){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-323") === null)){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-324") === null)){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-325") === null)){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-326") === null)){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-327") === null)){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-331") === null)){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-332") === null)){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-333") === null)){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-334") === null)){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-335") === null)){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-336") === null)){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-337") === null)){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-341") === null)){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-342") === null)){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-343") === null)){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-344") === null)){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-345") === null)){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-346") === null)){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-347") === null)){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-351") === null)){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-352") === null)){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-353") === null)){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-354") === null)){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-355") === null)){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-356") === null)){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);}
+        if (!(localStorage.getItem("imgStern-357") === null)){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);}
+      }
+       
+          function bewertungempfangen(){
+            var number = localStorage.getItem("bewertungText-3");//Hier
+            if (document.getElementById("star-container").style.display==="none"){
+                document.getElementById("bewertung-erstellen2").style.display ="block";
+            }else{
+                  document.getElementById("star-container").style.display="flex";
+                  document.getElementById("bewertung-erstellen2").style.display ="none";
+                  if((number.length)>9){
+                    document.getElementById("mehrAnzeigenButton-1").style.display="block";
+                    var numberp = number.substring(0, 9) + "..."
+                    document.getElementById("myText-1").innerHTML = "Bewertung 1: "+ numberp;
+                    localStorage.setItem("mehranzeigen-31",number);//Hier
+                    localStorage.setItem("bewertung-31",numberp);}//Hier
+                  else { 
+                    document.getElementById("mehrAnzeigenButton-1").style.display="block";
+                    document.getElementById("mehrAnzeigenButton-1").style.visibility="hidden";
+                    document.getElementById("myText-1").innerHTML = "Bewertung 1: "+ number;
+                    localStorage.setItem("bewertung-31",number);}}}//Hier
+      
             function bewertungerstellen(event){
               document.getElementById("bewertung-eingeben2").style.display ="block";
               document.getElementById("bewertung-erstellen2").style.display ="none";
               document.getElementById("Bewertung-speichern").style.display="block";
               
-            }var c =2;
+              }
+            if (!(localStorage.getItem("bewertung-12")===null)){var c =3;}else{var c=2;};if (!(localStorage.getItem("bewertung-13")===null)){var c =4;};if (!(localStorage.getItem("bewertung-14")===null)){var c =5;};if (!(localStorage.getItem("bewertung-15")===null)){var c =6;};if (!(localStorage.getItem("bewertung-16")===null)){var c =7;}//Hier
+            
+
             function bewertungspeichern(event){
-              
-              document.getElementById("bewertung-eingeben2").style.display ="none";
-              document.getElementById("bewertung-erstellen2").style.display ="block";
-              document.getElementById("Bewertung-speichern").style.display="none";
-              var text =document.getElementById("bewertung-eingeben2").value;
-              document.getElementById("myText-"+c).style.display ="block"; 
+              if( (document.getElementById("bewertung-eingeben2").value.length)>9){
+              document.getElementById("mehrAnzeigenButton-"+c).style.display="block";
+              var textp = document.getElementById("bewertung-eingeben2").value.substring(0, 9) + "...";
+              var textg = document.getElementById("bewertung-eingeben2").value;
+              localStorage.setItem("mehranzeigen-3"+c,textg);//Hier
+              localStorage.setItem("bewertung-3"+c,textp);//Hier
+              document.getElementById("myText-"+c).innerHTML = "Bewertung " + c + ": "+ textp;
+              }
+              else { 
+              document.getElementById("mehrAnzeigenButton-"+c).style.display="block";
+              document.getElementById("mehrAnzeigenButton-"+c).style.visibility="hidden";
+              var text = document.getElementById("bewertung-eingeben2").value;
               document.getElementById("myText-"+c).innerHTML = "Bewertung " + c + ": "+ text;
+              localStorage.setItem("bewertung-3"+c,text);//Hier
+              }
+             
               document.getElementById("bewertung-eingeben2").value="";
-              localStorage.setItem("bewertung-3"+c,text);
+              document.getElementById("bewertung-eingeben2").style.display ="none";
+              document.getElementById("Bewertung-speichern").style.display="none";
+              document.getElementById("myText-"+c).style.display ="block";      
+              document.getElementById("star-container").style.display="flex";
               c++;
             }
-           
+            
+            function MehrAnzeigen(id){
+              if(id==="mehrAnzeigenButton-1"){alert(localStorage.getItem("mehranzeigen-31"))}//Hier
+              else if(id==="mehrAnzeigenButton-2"){alert(localStorage.getItem("mehranzeigen-32"))}
+              else if(id==="mehrAnzeigenButton-3"){alert(localStorage.getItem("mehranzeigen-33"))}
+              else if(id==="mehrAnzeigenButton-4"){alert(localStorage.getItem("mehranzeigen-34"))}
+              else if(id==="mehrAnzeigenButton-5"){alert(localStorage.getItem("mehranzeigen-35"))}
+              else if(id==="mehrAnzeigenButton-6"){alert(localStorage.getItem("mehranzeigen-36"))}
+              else if(id==="mehrAnzeigenButton-7"){alert(localStorage.getItem("mehranzeigen-37"))}
 
+            } 
+            if (!(localStorage.getItem("imgStern-311") === null)){var f=2}else if (!(localStorage.getItem("imgStern-321") === null)){var f=2}else if (!(localStorage.getItem("imgStern-331") === null)){var f=2}else if (!(localStorage.getItem("imgStern-341") === null)){var f=2}else if (!(localStorage.getItem("imgStern-351") === null)){var f=2}else{var f =1}//Hier
+            if (!(localStorage.getItem("imgStern-312") === null)){var f=3}else if (!(localStorage.getItem("imgStern-322") === null)){var f=3}else if (!(localStorage.getItem("imgStern-332") === null)){var f=3}else if (!(localStorage.getItem("imgStern-342") === null)){var f=3}else if (!(localStorage.getItem("imgStern-352") === null)){var f=3}
+            if (!(localStorage.getItem("imgStern-313") === null)){var f=4}else if (!(localStorage.getItem("imgStern-323") === null)){var f=4}else if (!(localStorage.getItem("imgStern-333") === null)){var f=4}else if (!(localStorage.getItem("imgStern-343") === null)){var f=4}else if (!(localStorage.getItem("imgStern-353") === null)){var f=4}
+            if (!(localStorage.getItem("imgStern-314") === null)){var f=5}else if (!(localStorage.getItem("imgStern-324") === null)){var f=5}else if (!(localStorage.getItem("imgStern-334") === null)){var f=5}else if (!(localStorage.getItem("imgStern-344") === null)){var f=5}else if (!(localStorage.getItem("imgStern-354") === null)){var f=5}
+            if (!(localStorage.getItem("imgStern-315") === null)){var f=6}else if (!(localStorage.getItem("imgStern-325") === null)){var f=6}else if (!(localStorage.getItem("imgStern-335") === null)){var f=6}else if (!(localStorage.getItem("imgStern-345") === null)){var f=6}else if (!(localStorage.getItem("imgStern-355") === null)){var f=6}
+            if (!(localStorage.getItem("imgStern-316") === null)){var f=7}else if (!(localStorage.getItem("imgStern-326") === null)){var f=7}else if (!(localStorage.getItem("imgStern-336") === null)){var f=7}else if (!(localStorage.getItem("imgStern-346") === null)){var f=7}else if (!(localStorage.getItem("imgStern-356") === null)){var f=7}
+
+Object.defineProperty(Object, 'debounce', {
+  
+    value: function(callback, timeout){
+            let timeout_id;
+            return function(thisArg){
+                if(timeout_id){
+                    clearTimeout(timeout_id)
+                }
+                timeout_id = setTimeout(callback.bind(this, thisArg), timeout);
+            }
+    },
+
+    enumerable: true,
+    writable: true,
+    configurable: true
+})
+
+
+class StarRating{
+    
+    constructor(ratingScale, containerName){
+        this.scale = ratingScale
+        this.containerName = containerName
+        this.rating = 0
+        this.createStarsAndAppend()
+
+        let currentRatingContainer = document.createElement('div')
+        currentRatingContainer.setAttribute('class', 'current-rating')
+        document.querySelector('body').appendChild(currentRatingContainer)
+    }
+    clearRating(){
+        document.querySelectorAll('.' + this.containerName + " > .star").forEach(function(node){
+            node.classList.remove('selected')
+        })
+        this.rating = 0
+        
+    }
+    starClick(thisArg){
+        let starIndex = this.attributes['id'].value.split('-')[0] 
+        let stars = document.querySelectorAll('.' + thisArg.containerName + " > .star")  
+        thisArg.rating = 0
+
+        stars.forEach(function(star, index){
+            if(index < starIndex){
+                stars[index].classList.add("selected")
+                thisArg.rating+=1
+            }
+            else{
+                stars[index].classList.remove("selected")
+            }
+        })
+          if(thisArg.rating===1){
+            if(f===1){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);localStorage.setItem("imgStern-311",img);}//Hier
+            else if(f===2){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);localStorage.setItem("imgStern-312",img);}
+            else if(f===3){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);localStorage.setItem("imgStern-313",img);}
+            else if(f===4){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);localStorage.setItem("imgStern-314",img);}
+            else if(f===5){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);localStorage.setItem("imgStern-315",img);}
+            else if(f===6){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);localStorage.setItem("imgStern-316",img);}
+            else if(f===7){var img = new Image();img.src="Bilder/1Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);localStorage.setItem("imgStern-317",img);}}
+          else if(thisArg.rating===2){ if(f===1){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);localStorage.setItem("imgStern-321",img);}
+            else if(f===2){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);localStorage.setItem("imgStern-322",img);}
+            else if(f===3){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);localStorage.setItem("imgStern-323",img);}
+            else if(f===4){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);localStorage.setItem("imgStern-324",img);}
+            else if(f===5){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);localStorage.setItem("imgStern-325",img);}
+            else if(f===6){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);localStorage.setItem("imgStern-326",img);}
+            else if(f===7){var img = new Image();img.src="Bilder/2Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);localStorage.setItem("imgStern-327",img);}}
+          else if(thisArg.rating===3){ if(f===1){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);localStorage.setItem("imgStern-331",img);}
+            else if(f===2){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);localStorage.setItem("imgStern-332",img);}
+            else if(f===3){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);localStorage.setItem("imgStern-333",img);}
+            else if(f===4){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);localStorage.setItem("imgStern-334",img);}
+            else if(f===5){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);localStorage.setItem("imgStern-335",img);}
+            else if(f===6){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);localStorage.setItem("imgStern-336",img);}
+            else if(f===7){var img = new Image();img.src="Bilder/3Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);localStorage.setItem("imgStern-337",img);}}
+          else if(thisArg.rating===4){ if(f===1){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);localStorage.setItem("imgStern-341",img);}
+            else if(f===2){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);localStorage.setItem("imgStern-342",img);}
+            else if(f===3){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);localStorage.setItem("imgStern-343",img);}
+            else if(f===4){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);localStorage.setItem("imgStern-344",img);}
+            else if(f===5){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);localStorage.setItem("imgStern-345",img);}
+            else if(f===6){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);localStorage.setItem("imgStern-346",img);}
+            else if(f===7){var img = new Image();img.src="Bilder/4Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);localStorage.setItem("imgStern-347",img);}}
+          else if(thisArg.rating===5){ if(f===1){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=208+"px";document.body.appendChild(img);localStorage.setItem("imgStern-351",img);}
+            else if(f===2){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=279+"px";document.body.appendChild(img);localStorage.setItem("imgStern-352",img);}
+            else if(f===3){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=350+"px";document.body.appendChild(img);localStorage.setItem("imgStern-353",img);}
+            else if(f===4){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=421+"px";document.body.appendChild(img);localStorage.setItem("imgStern-354",img);}
+            else if(f===5){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=492+"px";document.body.appendChild(img);localStorage.setItem("imgStern-355",img);}
+            else if(f===6){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=563+"px";document.body.appendChild(img);localStorage.setItem("imgStern-356",img);}
+            else if(f===7){var img = new Image();img.src="Bilder/5Stern.png";img.style.position="absolute";img.style.width=110+"px";img.style.height="auto";img.style.left=525+"px";img.style.top=634+"px";document.body.appendChild(img);localStorage.setItem("imgStern-357",img);}}
+          
+          document.getElementById("bewertung-erstellen2").style.display ="block";
+          
+          document.getElementById("star-container").style.display="none";
+          var starz =thisArg.rating;
+          localStorage.setItem("star-3"+f,starz);   //Hier
+          durchschnittSterne();       
+          f++;
+          
+    }
+    createStarsAndAppend(){
+        let starContainer;
+        try{
+            starContainer = document.querySelector('.' + this.containerName)
+            if(!starContainer){
+                throw new Error(`${this.container} class doesn't exist! `)
+            }
+
+            for(let i = 1; i <= this.scale; i++){
+                let star = document.createElement('span')
+                star.setAttribute('class', 'star')
+                star.setAttribute('id', i+"-"+this.containerName)
+                let thisArg = this
+                let debouncedFn = Object.debounce(this.starClick, 200)
+                star.addEventListener('click', function(){
+                    debouncedFn.call(this, thisArg)
+                })
+                starContainer.appendChild(star)
+            }
+            let debouncedFn = Object.debounce(this.clearRating, 200)
+            document.querySelector(".clearRatingBtn").addEventListener('click', debouncedFn.bind(this))
+
+        }
+        catch(err){
+            console.error(err.name + ": " + err.message);
+        }
+
+    }
+    
+}
+new StarRating(5, 'star-container-1')
         </script>
-        <h3 id="myText-1"></h3>
-        <h3 id="myText-2"></h3>
-        <h3 id="myText-3"></h3>
-        <h3 id="myText-4"></h3>
-        <h3 id="myText-5"></h3>
-        <h3 id="myText-6"></h3>
-        <h3 id="myText-7"></h3>
-        <button id = "bewertung-erstellen2" onclick="bewertungerstellen(event)">Bewertung erstellen</button>
-        <h3>
-          <input id ="bewertung-eingeben2" class ="bewertung-eingebenc"></input>
-        </h3>
-        <button id = "Bewertung-speichern"onclick="bewertungspeichern(event)">Bewertung speichern</button>
-
     <!-- Footer Section -->  
     <footer class="footer">
       <div class="footer__addr">
@@ -134,7 +407,7 @@
         </li> 
         <li class="nav__item">
           <h2 class="nav__title">Das Unternehmen</h2>
-          <ul class="nav__ul nav__ul--extra">
+          <ul class="nav_ul nav_ul--extra">
             <li>
               <a href="#">Historie</a>
             </li>
@@ -167,5 +440,3 @@
     </footer>
   </body>
 </html>
-
-

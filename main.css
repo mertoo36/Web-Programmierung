@@ -876,4 +876,18 @@ a {
   #mehrAnzeigenButton-4{display: none;}
   #mehrAnzeigenButton-5{display: none;}
   #mehrAnzeigenButton-6{display: none;}
-  #mehrAnzeigenButton-7{display: none;}}
+  #mehrAnzeigenButton-7{display: none;}
+
+
+  .bewertung-eingebenc{
+    border-style: solid;
+    border-color: #95E2F0;
+    border-width: 7px;
+    position: relative;
+    left: -8px;
+    
+  }
+
+
+
+}
