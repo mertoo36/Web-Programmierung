@@ -548,6 +548,10 @@ a {
     box-shadow: 0px 0px 10px #C8C7D9;
     position: relative;
   }
+  .datenschutz{
+      width: 900px !important;
+      height: 4200px !important;
+  }
   .container .googlemaps {
     width: 45%;
     float: left;
