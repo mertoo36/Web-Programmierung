@@ -8,12 +8,18 @@ html {
 
 }
 .links{
-  float: left;
+  position: relative;
+  top: -110px;
 
 }
-.rechts{
+.startmap{
+  position: relative;
+  left: -270px;
+  top: 80px;
+}
 
-  float: right;
+.höhestartseite{
+  min-height: 200px;
 }
 h5{
 font-size: smaller;
@@ -113,7 +119,9 @@ display: flex;
 img {vertical-align: middle;}
 .slideshow-container {
 max-width: 500px;
-position: relative;
+position: absolute;
+left: 859px;
+top: 230px;
 margin: auto;
 }
 
@@ -341,12 +349,6 @@ hr {
 a {
   color: dodgerblue;
 }
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
 /* navbar*/
 .navbar {
   background: rgb(149, 226, 240);
@@ -438,9 +440,8 @@ a {
 }
 
 .footer__logo {
-  font-family: 'Pacifico', cursive;
   font-weight: 400;
-  text-transform: lowercase;
+  text-transform:capitalize;
   font-size: 1.5rem;
 }
 

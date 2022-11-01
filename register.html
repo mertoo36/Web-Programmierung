@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <!-- Navbar Sectionk -->
+    <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
         <a href="index.html" id="navbar__logo">Travel Finder</a>
@@ -21,19 +21,20 @@
             <a href="map.html" class="navbar__links" id="home-page">Map</a>
           </li>
           <li class="navbar__item">
-            <a href="#about" class="navbar__links" id="about-page">Über Uns</a>
+            <a href="ÜberUns.html" class="navbar__links" id="about-page">Das Team</a>
           </li>
           <li class="navbar__item">
-            <a href="#services" class="navbar__links" id="services-page"
-              >Produkte</a
+            <a href="Kontakt.html" class="navbar__links" id="services-page"
+              >Kontakt</a
             >
           </li>
           <li class="navbar__btn">
-            <a href="login.html" class="button" id="signup">Anmelden</a>
+            <a href="login.html" class="navbar__links">Anmelden</a>
           </li>
         </ul>
       </div>
     </nav>
+
 
 
 
@@ -55,66 +56,57 @@
       
           <p>Wenn Sie den Account erstellen stimmen Sie unseren <a href="#">Datenschutzbedingungen</a> zu.</p>
           <button onclick="location.href='index.html'" type="submit" class="registerbtn">Registrieren</button>
-        </div>
-      
-        <div class="container signin">
           <p>Haben Sie bereits einen Account? <a href="#">Anmelden</a>.</p>
         </div>
       </form>
 
 
-    <!-- Footer Section -->  
-    <footer class="footer">
-      <div class="footer__addr">
-        <h1 class="footer__logo">Travel-Finder</h1>
-        <h2>Anschrift</h2>
-        <address>
-          Coblitzallee 1-9, 68163 Mannheim<br>    
-          <a class="footer__btn" href="mailto:wolf.mert@web.de">Email</a>
-        </address>
-      </div>
-      <ul class="footer__nav">
-        <li class="nav__item">
-          <h2 class="nav__title">Über Uns</h2>
-          <ul class="nav__ul">
-            <li>
-              <a href="#">Das Team</a>
-            </li>
-          </ul>
-        </li> 
-        <li class="nav__item">
-          <h2 class="nav__title">Das Unternehmen</h2>
-          <ul class="nav__ul nav__ul--extra">
-            <li>
-              <a href="#">Historie</a>
-            </li>
-            <li>
-              <a href="#">Philosophie</a>
-            </li>
-            <li>
-              <a href="#">Anschrift</a>
-            </li>
-          </ul>
-        </li> 
-        <li class="nav__item">
-          <h2 class="nav__title">Legal</h2>
-          <ul class="nav__ul">
-            <li>
-              <a href="#">Impressum</a>
-            </li> 
-            <li>
-              <a href="#">Datenschutzerklärung</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <div class="legal">
-        <p>&copy; 2022 Travel-Finder. All rights reserved.</p>
-        <div class="legal__links">
-          <span>Made with <span class="heart">♥</span>
+      <!-- Footer Section -->  
+      <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">TRAVEL-FINDER</h1>
+          <h2>Anschrift</h2>
+          <address>
+            Coblitzallee 1-9, 68163 Mannheim<br>    
+            <a class="footer__btn" href="mailto:wolf.mert@web.de">Email</a>
+          </address>
         </div>
-      </div>
-    </footer>
-  </body>
-</html>
-
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Über Uns</h2>
+            <ul class="nav__ul">
+              <li>
+                <a href="ÜberUns.html">Das Team</a>
+              </li>
+            </ul>
+          </li> 
+          <li class="nav__item">
+            <h2 class="nav__title">Das Unternehmen</h2>
+            <ul class="nav__ul nav__ul--extra">
+              <li>
+                <a href="Kontakt.html">Kontakt</a>
+              </li>
+            </ul>
+          </li> 
+          <li class="nav__item">
+            <h2 class="nav__title">Rechtliches</h2>
+            <ul class="nav__ul">
+              <li>
+                <a href="Impressum.html">Impressum</a>
+              </li> 
+              <li>
+                <a href="Datenschutz.html">Datenschutz</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="legal">
+          <p>&copy; 2022 Travel-Finder.</p>
+          <div class="legal__links">
+            <span>Made with <span class="heart">♥</span>
+          </div>
+        </div>
+      </footer>
+      <script src="app.js"></script>
+    </body>
+  </html>
