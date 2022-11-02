@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Login</title>
-
-    <link rel="stylesheet" href="./main.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Travel-Finder</title>
+    <meta name="description" content="Finde dein nächstes Urlaubsziel." />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
 
-     <!-- Navbar Section -->
-     <nav class="navbar">
+    <!-- Navbar Section -->
+    <nav class="navbar">
       <div class="navbar__container">
         <a href="index.html" id="navbar__logo">Travel Finder</a>
         <div class="navbar__toggle" id="mobile-menu">
@@ -29,64 +30,54 @@
             >
           </li>
           <li class="navbar__btn">
-            <a href="register.html" class="navbar__links">Regisitrieren</a>
+            <a href="login.html" class="navbar__links">Mein Konto</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!-- partial:index.partial.html -->
-    <br>
-    <div class="box-form">
-      <div class="left">
-        <div class="overlay">
-          <h1>Travel-Finder</h1>
-          <p>
-            Bewertungen verfassen und Erlebnis seines Urlaubs berichten.
-          </p>
-          <span>
-            <p>Anmelden mit</p>
-            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
-            <a href="#"
-              ><i class="fa fa-twitter" aria-hidden="true"></i>
-              Twitter</a
-            >
-          </span>
-        </div>
+    <!--Website-->
+
+    
+<div class="strucure">
+  <div class="links">
+    <div class="titel">
+      <h1>Travel-Finder</h1>
+    </div>  
+    <div class="startmap">
+      <a href="map.html"
+        ><img
+          class="map"
+          class="bild"
+          src="../Bilder/Weltkarte.png"
+          alt="Weltkarte"
+          title="Weltkarte"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+<hr/>
+    <!--slideshow-->
+<div class="structure">
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 2</div>
+        <img src="../Bilder/phuket3.png" title="phuket" style="width:80%">
+        <div class="text">Phuket, Thailand</div>
       </div>
-
-      <div class="right">
-        <h5>Login</h5>
-        <p>
-          Noch keinen Account? <a href="register.html">Account erstellen</a> in weniger als 1 Minute
-        </p>
-        <div class="inputs">
-          <input type="E-Mail" placeholder="E-Mail" />
-          <br />
-          <input type="Passwort" placeholder="Passwort" />
-        </div>
-
-        <br /><br />
-
-        <div class="remember-me--forget-password">
-          <!-- Angular -->
-          <label>
-            <input type="checkbox" name="item" checked />
-            <span class="text-checkbox">an mich Erinnern</span>
-          </label>
-          <p>Passwort vergessen?</p>
-        </div>
-
-        <br />
-        <button onclick="window.location.href='indexangemeldet.html'">
-          anmelden
-        </button>
+      <div class="mySlides">
+        <div class="numbertext">1 / 2</div>
+        <img src="../Bilder/phuket1.png" title="phuket" style="width:80%">
+        <div class="text">Phuket, Thailand</div>
       </div>
     </div>
-    <!-- partial -->
-    <br>
-  <!-- Footer Section -->  
-  <footer class="footer">
+
+
+  <br>
+  <br>
+   <!-- Footer Section -->  
+   <footer class="footer">
     <div class="footer__addr">
       <h1 class="footer__logo">TRAVEL-FINDER</h1>
       <h2>Anschrift</h2>
