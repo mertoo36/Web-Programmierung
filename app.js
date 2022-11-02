@@ -26,33 +26,33 @@ var slideIndex = 0;
         slides2[slideIndex2-1].style.display = "block"; 
         setTimeout(showSlides2, 4000); // Change image every 2 seconds
       }
-      var slideIndex = 0;
+      var slideIndex3 = 0;
       showSlides3();
       
       function showSlides3() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides3");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; 
+        var i3;
+        var slides3 = document.getElementsByClassName("mySlides3");
+        for (i3 = 0; i3 < slides3.length; i3++) {
+          slides3[i3].style.display = "none"; 
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1} 
-        slides[slideIndex-1].style.display = "block"; 
-        setTimeout(showSlides, 4000); // Change image every 2 seconds
+        slideIndex3++;
+        if (slideIndex3 > slides3.length) {slideIndex3 = 1} 
+        slides3[slideIndex3-1].style.display = "block"; 
+        setTimeout(showSlides3, 4000); // Change image every 2 seconds
       }
 
-      var slideIndex = 0;
+      var slideIndex4 = 0;
       showSlides4();
       
       function showSlides4() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides4");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; 
+        var i4;
+        var slides4 = document.getElementsByClassName("mySlides4");
+        for (i4 = 0; i4 < slides4.length; i4++) {
+          slides4[i4].style.display = "none"; 
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1} 
-        slides[slideIndex-1].style.display = "block"; 
-        setTimeout(showSlides, 4000); // Change image every 2 seconds
+        slideIndex4++;
+        if (slideIndex4 > slides4.length) {slideIndex4 = 1} 
+        slides4[slideIndex4-1].style.display = "block"; 
+        setTimeout(showSlides4, 4000); // Change image every 2 seconds
       }
 
