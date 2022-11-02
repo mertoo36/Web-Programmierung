@@ -505,6 +505,9 @@ a {
 .nav__ul a {
   color: rgb(255, 255, 255);
 }
+.nav_ul--extra a {
+  color: rgb(255, 255, 255);
+}
 
 .legal {
   display: flex;
@@ -688,8 +691,8 @@ a {
   #star-container{
     display: none;
     position: absolute;
-    top: 210px;
-    left: 760px;
+    top: 110px;
+    left: 330px;
   }
   .star-container{
       justify-content: right;
@@ -736,6 +739,26 @@ a {
     
     
     
+  }
+  .bildbewertung{
+    float: left;
+    z-index: 10;
+    position: absolute;
+    left: 700px;
+    top: 100px;
+  }
+  .zoom{
+    padding: 50px;
+    border-radius: 50%;
+    transition: transform .2s;
+    margin: 0 auto;
+    width: 37%;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(3.5); /* IE 9 */
+    -webkit-transform: scale(3.5); /* Safari 3-8 */
+    transform: scale(3.5); 
   }
 
   .posBew{
@@ -822,53 +845,15 @@ a {
   
   
   
-  .bewertungsbutton {
+  
+  .posi{
     position: absolute;
-    left: 340px;
-    top: 136px;
-    align-items: center;
-    appearance: none;
-    background-image: radial-gradient(100% 100% at 100% 0, #95E2F0 0, #95e2f0 100%);
-    border: 0;
-    border-radius: 6px;
-    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
-    height: 48px;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 6px;
-    padding-right: 6px;
-    align-items: stretch;
-    text-align: left;
-    text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow,transform;
-    font-size: 18px;
+    left: 373px;
+    top:125px;
   }
+
   
-  .bewertungsbutton:focus {
-    box-shadow: #6ab6e5 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  }
-  
-  .bewertungsbutton:hover {
-    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #307683 0 -3px 0 inset;
-    transform: translateY(-2px);
-  }
-  
-  .bewertungsbutton:active {
-    box-shadow: #4e7781 0 3px 7px inset;
-    transform: translateY(2px);
-  }
+
   
   
   #stern5{display: none;}
