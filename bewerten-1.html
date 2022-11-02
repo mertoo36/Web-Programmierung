@@ -133,9 +133,9 @@
         
      
       function bewertungladen(){
-        if (!(localStorage.getItem("bewertung-11") === null)) {var text1 = localStorage.getItem("bewertung-11");document.getElementById("myText-1").innerHTML = "Bewertung 1: "+text1;};
-        if (!(localStorage.getItem("bewertung-12") === null)) {var text2 = localStorage.getItem("bewertung-12");document.getElementById("myText-2").style.display ="block";document.getElementById("myText-2").innerHTML = "Bewertung 2: "+text2;}  //Hier
-        if (!(localStorage.getItem("bewertung-13") === null)) {var text3 = localStorage.getItem("bewertung-13");document.getElementById("myText-3").style.display ="block";document.getElementById("myText-3").innerHTML = "Bewertung 3: "+text3;}
+        if (!(localStorage.getItem("bewertung-11") === null)) {var text1 = localStorage.getItem("bewertung-11");document.getElementById("myText-1").innerHTML = "Sugierthan: "+text1;};
+        if (!(localStorage.getItem("bewertung-12") === null)) {var text2 = localStorage.getItem("bewertung-12");document.getElementById("myText-2").style.display ="block";document.getElementById("myText-2").innerHTML = "Sugierthan: "+text2;}  //Hier
+        if (!(localStorage.getItem("bewertung-13") === null)) {var text3 = localStorage.getItem("bewertung-13");document.getElementById("myText-3").style.display ="block";document.getElementById("myText-3").innerHTML = "Sugierthan: "+text3;}
         if (!(localStorage.getItem("bewertung-14") === null)) {var text4 = localStorage.getItem("bewertung-14");document.getElementById("myText-4").style.display ="block";document.getElementById("myText-4").innerHTML = "Bewertung 4: "+text4;}
         if (!(localStorage.getItem("bewertung-15") === null)) {var text5 = localStorage.getItem("bewertung-15");document.getElementById("myText-5").style.display ="block";document.getElementById("myText-5").innerHTML = "Bewertung 5: "+text5;}
         if (!(localStorage.getItem("bewertung-16") === null)) {var text6 = localStorage.getItem("bewertung-16");document.getElementById("myText-6").style.display ="block";document.getElementById("myText-6").innerHTML = "Bewertung 6: "+text6;}
@@ -198,13 +198,13 @@
                   if((number.length)>9){
                     document.getElementById("mehrAnzeigenButton-1").style.display="block";
                     var numberp = number.substring(0, 9) + "..."
-                    document.getElementById("myText-1").innerHTML = "Bewertung 1: "+ numberp;
+                    document.getElementById("myText-1").innerHTML = "Sugiertha: "+ numberp;
                     localStorage.setItem("mehranzeigen-11",number);//Hier
                     localStorage.setItem("bewertung-11",numberp);}//Hier
                   else { 
                     document.getElementById("mehrAnzeigenButton-1").style.display="block";
                     document.getElementById("mehrAnzeigenButton-1").style.visibility="hidden";
-                    document.getElementById("myText-1").innerHTML = "Bewertung 1: "+ number;
+                    document.getElementById("myText-1").innerHTML = "Sugierthan: "+ number;
                     localStorage.setItem("bewertung-11",number);}}}//Hier
       
             function bewertungerstellen(event){

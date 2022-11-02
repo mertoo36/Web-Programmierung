@@ -133,8 +133,8 @@
         
      
       function bewertungladen(){
-        if (!(localStorage.getItem("bewertung-01") === null)) {var text1 = localStorage.getItem("bewertung-01");document.getElementById("myText-1").innerHTML = "Bewertung 1: "+text1;};
-        if (!(localStorage.getItem("bewertung-02") === null)) {var text2 = localStorage.getItem("bewertung-02");document.getElementById("myText-2").style.display ="block";document.getElementById("myText-2").innerHTML = "Bewertung 2: "+text2;}
+        if (!(localStorage.getItem("bewertung-01") === null)) {var text1 = localStorage.getItem("bewertung-01");document.getElementById("myText-1").innerHTML = "Sugierthan: "+text1;};
+        if (!(localStorage.getItem("bewertung-02") === null)) {var text2 = localStorage.getItem("bewertung-02");document.getElementById("myText-2").style.display ="block";document.getElementById("myText-2").innerHTML = "Sugierthan: "+text2;}
         if (!(localStorage.getItem("bewertung-03") === null)) {var text3 = localStorage.getItem("bewertung-03");document.getElementById("myText-3").style.display ="block";document.getElementById("myText-3").innerHTML = "Bewertung 3: "+text3;}
         if (!(localStorage.getItem("bewertung-04") === null)) {var text4 = localStorage.getItem("bewertung-04");document.getElementById("myText-4").style.display ="block";document.getElementById("myText-4").innerHTML = "Bewertung 4: "+text4;}
         if (!(localStorage.getItem("bewertung-05") === null)) {var text5 = localStorage.getItem("bewertung-05");document.getElementById("myText-5").style.display ="block";document.getElementById("myText-5").innerHTML = "Bewertung 5: "+text5;}
@@ -198,13 +198,13 @@
                   if((number.length)>9){
                     document.getElementById("mehrAnzeigenButton-1").style.display="block";
                     var numberp = number.substring(0, 9) + "..."
-                    document.getElementById("myText-1").innerHTML = "Bewertung 1: "+ numberp;
+                    document.getElementById("myText-1").innerHTML = "Sugierthan: "+ numberp;
                     localStorage.setItem("mehranzeigen-01",number);
                     localStorage.setItem("bewertung-01",numberp);}
                   else { 
                     document.getElementById("mehrAnzeigenButton-1").style.display="block";
                     document.getElementById("mehrAnzeigenButton-1").style.visibility="hidden";
-                    document.getElementById("myText-1").innerHTML = "Bewertung 1: "+ number;
+                    document.getElementById("myText-1").innerHTML = "Sugierthan: "+ number;
                     localStorage.setItem("bewertung-01",number);}}}
       
             function bewertungerstellen(event){

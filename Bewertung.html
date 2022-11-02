@@ -134,8 +134,8 @@
           
           
           function bewertungladen(){
-        if (!(localStorage.getItem("bewertung-61") === null)) {var text1 = localStorage.getItem("bewertung-61");document.getElementById("myText-1").innerHTML = "Bewertung 1: "+text1;};
-        if (!(localStorage.getItem("bewertung-62") === null)) {var text2 = localStorage.getItem("bewertung-62");document.getElementById("myText-2").style.display ="block";document.getElementById("myText-2").innerHTML = "Bewertung 2: "+text2;}
+        if (!(localStorage.getItem("bewertung-61") === null)) {var text1 = localStorage.getItem("bewertung-61");document.getElementById("myText-1").innerHTML = "Celine: "+text1;};
+        if (!(localStorage.getItem("bewertung-62") === null)) {var text2 = localStorage.getItem("bewertung-62");document.getElementById("myText-2").style.display ="block";document.getElementById("myText-2").innerHTML = "Sugierthan: "+text2;}
         if (!(localStorage.getItem("bewertung-63") === null)) {var text3 = localStorage.getItem("bewertung-63");document.getElementById("myText-3").style.display ="block";document.getElementById("myText-3").innerHTML = "Bewertung 3: "+text3;}
         if (!(localStorage.getItem("bewertung-64") === null)) {var text4 = localStorage.getItem("bewertung-64");document.getElementById("myText-4").style.display ="block";document.getElementById("myText-4").innerHTML = "Bewertung 4: "+text4;}
         if (!(localStorage.getItem("bewertung-65") === null)) {var text5 = localStorage.getItem("bewertung-65");document.getElementById("myText-5").style.display ="block";document.getElementById("myText-5").innerHTML = "Bewertung 5: "+text5;}
@@ -194,7 +194,7 @@
         document.getElementById("mehrAnzeigenButton-1").style.display="block";
         var number = "Im Dezember 2018 ging es für mich nach Phuket. Phuket ist eine Insel im Süden von Thailand. Die Wintersaison bietet sich sehr gut für eine Reise nach Thailand an, da dort zu der Zeit keine Regenzeit ist. Mit seinen schönen Stränden und einem warmen Meer ist Phuket ein absolutes Naturwunder. Neben einem Tagestrip auf die Phi Phi Islands ist eine Kanutour zur Maya Bay sehr zu empfehlen. Außerdem kann man rund um Phuket beeindruckende Schnorchel- oder Tauchtouren unternehmen. Untergekommen bin ich in dem „The Village Resort“ auf Coco Island, welches nur wenige Schiffsminuten von Phuket entfernt ist. Das Resort ist mit das beste, welches ich bis jetzt besucht habe. Das Personal ist sehr freundlich und zuvorkommend, auf Hygiene wird hier viel Wert gelegt. Außerdem sind die Zimmer sehr schön, gepflegt und gut ausgestattet. Ein großes Buffet mit regionalen und internationalen Spezialitäten ist im All-Inclusive-Packet inbegriffen. Der hoteleigene Strand ist leider nicht beeindruckend, jedoch befinden sich ausreichend Traumstrände in der Nähe."
         var numberp = number.substring(0, 9) + "..."
-        document.getElementById("myText-1").innerHTML = "Bewertung 1: "+numberp
+        document.getElementById("myText-1").innerHTML = "Celine: "+numberp
         localStorage.setItem("mehranzeigen-61",number);
         localStorage.setItem("bewertung-61",numberp);
         localStorage.setItem("star-61",4);
