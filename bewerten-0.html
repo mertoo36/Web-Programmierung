@@ -223,13 +223,13 @@
               var textg = document.getElementById("bewertung-eingeben2").value;
               localStorage.setItem("mehranzeigen-0"+c,textg);
               localStorage.setItem("bewertung-0"+c,textp);
-              document.getElementById("myText-"+c).innerHTML = "Bewertung " + c + ": "+ textp;
+              document.getElementById("myText-"+c).innerHTML = "Sugierthan: "+ textp;
               }
               else { 
               document.getElementById("mehrAnzeigenButton-"+c).style.display="block";
               document.getElementById("mehrAnzeigenButton-"+c).style.visibility="hidden";
               var text = document.getElementById("bewertung-eingeben2").value;
-              document.getElementById("myText-"+c).innerHTML = "Bewertung " + c + ": "+ text;
+              document.getElementById("myText-"+c).innerHTML = "Sugierthan: "+ text;
               localStorage.setItem("bewertung-0"+c,text);
               }
              
