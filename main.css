@@ -637,10 +637,13 @@ a {
   }
   .angesagt {
     margin-top: 450px;
+    position: sticky;
     padding: 50px;
     text-align: center;
     background-color: rgb(149, 226, 240);
     color: white;
+    top: 0;
+    z-index: 50;
   }
   .containerabout {
     padding: 0 16px;
