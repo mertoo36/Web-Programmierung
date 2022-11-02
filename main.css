@@ -629,13 +629,19 @@ a {
   }
   
   .about-section {
+    margin-top: 10px;
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(149, 226, 240);
+    color: white;
+  }
+  .angesagt {
     margin-top: 450px;
     padding: 50px;
     text-align: center;
     background-color: rgb(149, 226, 240);
     color: white;
   }
-  
   .containerabout {
     padding: 0 16px;
   }
