@@ -14,8 +14,10 @@ html {
 }
 .startmap{
   position: relative;
-  left: -270px;
-  top: 80px;
+  left: -400px;
+  top: 30px;
+  min-width: 1250px;
+  min-height: 100px;
 }
 .containerfotos{
     background: #F8F8F8;
@@ -49,10 +51,7 @@ body {
 color: #fff;
 }
 
-.structure{
-justify-content: flex-start;
-display: flex;
-}
+
 .weltkarte{
   animation: colorize 1s cubic-bezier(0, 0, .78, .36) 1;
   background: rgba(149, 226, 240, 0.951);
@@ -615,6 +614,14 @@ a {
     margin-bottom: 16px;
     padding: 0 8px;
   }
+  .columnindex {
+    margin-left: 50px;
+    float: inline-start;
+    width: 40%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
   
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -622,6 +629,7 @@ a {
   }
   
   .about-section {
+    margin-top: 500px;
     padding: 50px;
     text-align: center;
     background-color: rgb(149, 226, 240);
